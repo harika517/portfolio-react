@@ -2,6 +2,8 @@
 
 :root {
   --primary-white: #fff;
+  --primary-black: #000;
+  --primary-red: crimson;
 }
 
 body{
@@ -15,7 +17,11 @@ body{
   font-weight: 700;
 }
 .navbar-brand span{
-  color: crimson;
+  color: var(--primary-red);
+}
+
+nav {
+  z-index: 2;
 }
 
 /** Navbar Menu **/
@@ -36,6 +42,99 @@ nav a.nav-link {
 }
 
 .navbar-nav > li a:hover {
-  color: crimson !important
+  color: var(--primary-red) !important
 }
 
+/**** Header *****/
+.header-wraper {
+  position: relative;
+  background: url(slider-background-1.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.home-content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+.home-content .text-1{
+  font-size: 1.688rem;
+  color: var(--primary-white);
+}
+
+.home-content .text-2{
+  font-size: 2.688rem;
+  font-weight: 600;
+  margin-left: -3px;
+  color: var(--primary-white);
+  /* color: crimson; */
+}
+.home-content .text-3{
+  font-size: 1.688rem;
+  margin: 5px 0;
+  color: var(--primary-white);
+}
+
+.home-content .text-3 span{
+  color: crimson;
+  font-size: 1.688rem;
+  font-weight: 500;
+}
+
+.home-content h4{
+  color: var(--primary-white);
+}
+
+.home-content .highlight{
+  color: var(--primary-red);
+}
+
+@media(max-wdith: 768px){
+  .home-content .text-1{
+    font-size: 1.5rem !important;
+  }
+}
+/***** Typed Text ****/
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+.home-content .btn-main-offer {
+  border: 1px solid var(--primary-red);
+  border-radius: 0.313rem;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+}
+
+.home-content .btn-main-offer :hover{
+  text-decoration: none;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  transition: .2s ease-in-out;
+}
+
+/**** Particles Styling *****/
+.tsparticles-canvas-el{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/* @media(max-width: 768px){
+  .particles-canvas {
+
+  }
+} */
