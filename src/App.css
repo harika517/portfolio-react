@@ -4,6 +4,7 @@
   --primary-white: #fff;
   --primary-black: #000;
   --primary-red: crimson;
+  --primary-gray: #f5f5f5;
 }
 
 body{
@@ -164,3 +165,92 @@ nav a.nav-link {
     width: 10rem;
   }
 }
+
+/****** Projects ******/
+
+.portfolio-wrapper{
+  background : var(--primary-gray);
+  padding: 3rem 0;
+}
+
+.portfolio-img{
+  width:20rem;
+  height: 15rem;
+  /* border: 1px solid var(--primary-red); */
+  box-shadow: 10px 10px 5px darkgrey ;
+  padding : 0 0.5rem;
+
+}
+
+.portfolio-img-box{
+  position: relative;
+  margin: 1rem;
+}
+
+/***** Overflow ***/
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: #000000;
+  width: 20rem ;
+  height: 15rem;
+  top: 0;
+  /* border: 1px solid var(--primary-red); */
+  cursor: pointer
+}
+
+.portfolio-img-box:hover .overflow{
+  opacity: 60%;
+  transition:0.3s ease-in-out;
+}
+
+.portfolio-icon{
+  position: absolute;
+  opacity: 0;
+  margin-left: -11rem;
+  margin-top: 7rem;
+  color: var(--primary-white);
+  font-size: 1.5rem;
+}
+
+.portfolio-img-box:hover .portfolio-icon{
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/****** Portfolio popupbox *****/
+
+.portfolio-image-popupbox {
+  width: 45rem;
+  padding: 0 0.5rem;  
+}
+
+.project-title{
+  color: var(--primary-red)
+}
+
+/*** portfolio media ***/
+
+@media (max-width: 768px){
+  .portfolio-image-popupbox {
+    width: 100%;
+  }
+}
+
+@media (max-height: 850px){
+.popupbox-wrapper {
+  max-height: 100%
+}
+  .portfolio-image-popupbox {
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 768px){
+  .popupbox-wrapper {
+     width: 100%; 
+    max-height: 100%
+  }
+} */
